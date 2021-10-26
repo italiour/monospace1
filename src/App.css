@@ -1,39 +1,61 @@
 .App {
-  text-align: center;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.topPart {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    line-height: 22px;
+    padding: 10px 12px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.leftTopPart {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.leftTopPart > p {
+    padding-left: 15px;
+    padding-top: 5px;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.rightTopPart {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.rightTopPart > p {
+    padding-right: 15px;
+    color: #808080;
+    font-size: 12px;
+}
+
+.fontWrapper {
+    border: 1px solid black;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.fontIcon {
+    font-weight: 100;
+    font-size: 1rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.questionMark {
+    color: #354069;
 }
