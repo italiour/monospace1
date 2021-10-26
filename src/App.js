@@ -5,11 +5,13 @@ import { Table } from './features/Table';
 import { usersFetch } from './features/usersFetch';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers } from '@fortawesome/free-solid-svg-icons';
-import Image from './Questionmark.svg'
+import Image from './Questionmark.svg';
+import {selectCount} from './features/userSlice';
 
 function App() {
 
   const dispatch = useDispatch();
+  const count = useSelector(selectCount);
   const { hasError } = useSelector((state) => state.allUsers);
 
   useEffect(() => {
@@ -30,7 +32,7 @@ function App() {
           <p>Users</p>
         </div>
         <div className="rightTopPart">
-          <p>2 Selected</p>
+          <p>{count + " Selected"}</p>
           <div className="imgWrapper">
           <img src={Image} alt="lala" className="questionMark"/>
           </div>
